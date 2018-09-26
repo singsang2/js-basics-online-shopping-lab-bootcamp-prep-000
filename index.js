@@ -23,18 +23,22 @@ function viewCart() {
   else{
     for(let i = 0; i<cart.length; i++){
       if(i<cart.length - 1){
-        s = s + `${cart[i].itemName} at $${cart[i].itemPrice}, `
+        s = s + `${cart[i].itemName} at $${cart[i].itemPrice}, `;
       }
       else{
-        s = s + `and ${cart[i].itemName} at $${cart[i].itemPrice}.`
+        s = s + `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
       }
     }
   }
-  return s
+  return s;
 }
 
 function total() {
-  // write your code here
+  var price =0;
+  for(var x in cart){
+    price += x.itemPrice;
+  }
+  return price;
 }
 
 function removeFromCart(item) {
