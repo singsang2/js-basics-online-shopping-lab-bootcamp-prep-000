@@ -38,7 +38,7 @@ function viewCart() {
 }
 
 function total() {
-  var price =0;
+  var price = 0;
   for(var x in cart){
     price += parseInt(x.itemPrice);
   }
